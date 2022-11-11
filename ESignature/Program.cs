@@ -8,8 +8,7 @@ targetDirectory = targetDirectory.Trim('"');
 
 if (targetDirectory != null && Directory.Exists(targetDirectory))
 {
-    try
-    {
+  
         var watch = System.Diagnostics.Stopwatch.StartNew();
         Console.WriteLine("Processing files ... ");
 
@@ -21,11 +20,8 @@ if (targetDirectory != null && Directory.Exists(targetDirectory))
         watch.Stop();
         Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
         Console.ReadLine();
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine(e.Message);
-    }
+    
+   
 }
 else
 {
